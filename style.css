@@ -1,23 +1,25 @@
-* {
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial,  sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #4ddbd3;
 }
 
 header {
-    background-color: #3b5998;
-    color: white;
+    background-color: #4CAF50;
     padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
 }
 
 nav ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
 }
@@ -27,47 +29,69 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
     text-decoration: none;
+    color: rgb(42, 42, 42);
+    font-weight: bold;
+    padding: 17px 15px;
+    transition: background-color 0.3s ease;
 }
 
-main {
-    padding: 20px;
-    text-align: center;
+nav ul li a:hover {
+    background-color: #45a049;
+    border-radius: 8px;
 }
 
+/* Hero Section */
 .hero {
-    background-color: #eaeaea;
-    padding: 40px 0;
-}
-
-footer {
-    background-color: #3b5998;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
-
-form {
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    color: rgb(255, 255, 255);
+    height: 80vh;
     display: flex;
     flex-direction: column;
-    max-width: 400px;
-    margin: 20px auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
 }
 
-form input {
-    margin-bottom: 10px;
-    padding: 10px;
-    font-size: 16px;
+.hero h1 {
+    font-size: 3rem;
+    margin: 0.3;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
 }
 
-form button {
-    padding: 10px;
-    background-color: #3b5998;
+.hero p {
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+/* Footer */
+footer {
+    background-color: #333;
     color: white;
-    border: none;
-    cursor: pointer;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+    position: relative;
+}
+
+footer p {
+    margin: 0.1;
+}
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
 }
